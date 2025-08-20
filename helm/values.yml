@@ -1,0 +1,13 @@
+﻿replicaCount: 2
+
+image:
+  repository: us-central1-docker.pkg.dev/my-project/gke-repo/gkeapp
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8080
+
+resources: {}
